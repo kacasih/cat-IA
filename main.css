@@ -1,36 +1,59 @@
 .cat-character {
-    display: inline;
-    top: 20px;
-    border-radius: 100%;
-    position: absolute;
-    margin-top: 13.6%;
+  display: inline-block;
+  top: 20px;
+  border-radius: 100%;
+  position: absolute;
+  margin-top: 615px;
+  left: 0px;
 
+}
 
+.catanimation {
+  animation: updown;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  
+  
+}
+
+@keyframes updown {
+  0% {transform: translate(0,0);}
+  50% {transform: translate(0,50)}
+  100% {transform: translate(0,-120px);}
 }
 
 #plane {
-   display: inline-block;
-   width: 1000px;
-   height: 200px;
-   border-style: dotted;
-   position: relative;
+ display: inline-block;
+ width: 2000px;
+ height: 700px;
+ border-style: dotted;
+ position: relative;
 }
 
 .obstacle {
-    display: inline;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    margin-top: 13.2%;
-    top: 19.5px;
-    left: 95%;
-    animation-name: obstaclemovement;
-    animation-duration: infinite;
-    background-color: black;
-    animation-direction: forward;
+  display: inline;
+  position: absolute;
+  margin-top: 600px;
+  top: 19.5px;
+  right: 5%;
+  animation-name: obstaclemovement;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-direction: normal;
+  animation-timing-function: linear;
 }
 
 @keyframes obstaclemovement {
-0% {left: 100%; top: 0px;}
-100% {left: 0%; top: 0px;}
+0% {transform: translateX(0);}
+100% {transform: translateX(-1850px);}
+}
+
+.leaderboards {
+margin-top: 50px;
+width: 100px;
+height: 100px;
+border-radius: 100%;
+vertical-align: auto;
+cursor: pointer;
 }
