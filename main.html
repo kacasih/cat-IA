@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head> 
-<link rel= "stylesheet" href ="objects.css">
-<link rel ="stylesheet" href = "cat.js"> 
-    
+  <head>
+    <link rel= "stylesheet" href = "objects.css">
+    <script src = "cat.js"> </script> 
+  </head>
 
-</head>
-
-<body>
-<div id ="plane">
-    <div class ="cat-character">
-        <img src ="images\catcharacter.jpg" width ="40"/>
+<body onload = "startgame()">
+  <div class = "wholepage">
+    <div id = "plane">
+      <img src = "images&gifs/background.png" width ="2000px" height = "700px">
+      <div class = "cat-character">
+        <img src = "images&gifs/cat.png" width = "100px" margin-left = "20px"/>
+      </div>
+      <div class = "obstacle">
+        <img src = "images&gifs/dog.png" width = "100px">
+      </div>
+      <div id = "belowplaneelements">
+        <button class = "leaderboards"> Click here for leaderboards</button>
+      </div>
     </div>
-    <div class ="obstacle">
-    </div>
-</div>
-
-</body>
+  </div>
+  </body>
 </html>
