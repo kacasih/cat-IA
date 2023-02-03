@@ -13,3 +13,19 @@ function startgame() {
     }
   });
 }
+
+
+var collisioncheck = setInterval(function() {
+  var catdata = catCharacterselect.getBoundingClientRect();
+  var obstacledata = obstacle.getBoundingClientRect();
+
+  if (catdata.right > obstacledata.left && 
+      catdata.left < obstacledata.right && 
+      catdata.bottom > obstacledata.top && 
+      catdata.top < obstacledata.bottom ) {
+    obstacle.style.animation = "none";
+    obstacle.style.display = "none";
+    alert("well played");
+  } 
+
+}, 50);
